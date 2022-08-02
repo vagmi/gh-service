@@ -7,7 +7,14 @@ edition = "2021"
 
 [dependencies]
 axum = "0.5.14"
-tokio = {version = "1.20.1", features = ["full"]}
-tower-http = {version="0.3.4", features = ["trace"]}
+error-stack = "0.1.1"
+reqwest = { version = "0.11.11", features = ["json", "deflate"] }
+serde = { version = "1.0.140", features = ["derive"] }
+serde_json = "1.0.82"
+tokio = { version = "1.20.1", features = ["full"] }
+tower-http = { version = "0.3.4", features = ["trace"] }
 tracing = "0.1.35"
 tracing-subscriber = "0.3.15"
+
+[dev-dependencies]
+wiremock = "0.5.13"

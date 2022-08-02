@@ -2,6 +2,7 @@ use axum::{Router, routing::get, Server};
 use tower_http::trace::TraceLayer;
 use std::net::SocketAddr;
 
+mod github;
 
 async fn handler() -> String {
     "hello world".into()
